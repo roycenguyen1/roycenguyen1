@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 15px/1.5 "Roboto", sans-serif;
+  background-color: #000;
+  height: 100%;
+  color: #fff;
+}
+
+/* Global */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transition: all 0.4s ease;
+}
+
+img {
+  width: 100%;
+}
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  position: fixed;
+  z-index: 100;
+}
+
+header p {
+  font-family: "Pinyon Script", cursive;
+  font-size: 2.5rem;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin: 0 0.5rem;
+}
+
+/* Showcase */
+.showcase {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.showcase::before {
+  content: "";
+  background: url(../img/background.jpg) no-repeat center center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.showcase-inner {
+  width: 60%;
+}
+
+.showcase-inner h1 {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.showcase-inner p {
+  margin: 2rem 0 3rem;
+  padding: 0 5em;
+}
+
+/* About */
+.about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about > div {
+  flex: 1;
+}
+.about .about-image {
+  padding: 0 2em 0 5em;
+}
+.about .about-image img {
+  opacity: 0.7;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.about .about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5em 0 2em;
+}
+
+.about-content p {
+  margin: 0.5rem 0;
+}
+
+.about-content > p:first-of-type {
+  margin-top: 2rem;
+}
+
+/* Pages */
+.pages {
+  width: 100%;
+  padding: 0 5rem;
+}
+.pages h1 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.boxes {
+  width: 100%;
+}
+
+.box > a {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.box-image {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.box-image img {
+  width: 320px;
+  padding: 0.5rem;
+}
