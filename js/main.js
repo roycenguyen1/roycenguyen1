@@ -66,3 +66,16 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// Add smooth scrolling effect to html website//
+
+$("#view-work").on("click", function () {
+  const images = $("#images").position().top;
+
+  $("html, body").animate(
+    {
+      scrollTop: images,
+    },
+    900
+  );
+});
