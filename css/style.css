@@ -46,12 +46,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
+  top: 0;
   position: fixed;
   z-index: 100;
 }
 
-header p {
+header .main-logo {
   font-family: "Pinyon Script", cursive;
   font-size: 2.5rem;
 }
@@ -66,7 +67,7 @@ header ul li {
 
 /* Showcase */
 .showcase {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -139,31 +140,96 @@ header ul li {
 
 /* Pages */
 .pages {
-  width: 100%;
-  padding: 0 5rem;
+  margin: 2rem 0;
 }
 .pages h1 {
   font-size: 1.6rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  padding: 5em 0 2rem;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.gallery-container {
+  position: relative;
+  width: 70%;
+  margin: 0 auto 2rem;
 }
 
-.boxes {
-  width: 100%;
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-.box > a {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
 
-.box-image {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.box-image img {
-  width: 320px;
-  padding: 0.5rem;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 1rem;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
