@@ -35,23 +35,26 @@ function showSlides(n) {
 
 // Header //
 
-var header = document.getElementById("header");
-
-window.onscroll = function () {
-  if (window.pageYOffset > 50) {
-    header.style.background = "rgba(0,0,0,0.85)";
-  } else {
-    header.style.background = "transparent";
-  }
-  scrollFunction();
-};
+$(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $("#header").addClass("changecolor");
+    }
+    if ($(this).scrollTop() < 50) {
+      $("#header").removeClass("changecolor");
+    }
+  });
+});
 
 // Scroll to top button //
 
 //Get the button:
-var mybutton = document.getElementById("myBtn");
+mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -67,7 +70,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// Add smooth scrolling effect to html website//
+// Add  Jquery smooth scrolling effect to html website//
 
 $("#view-work").on("click", function () {
   const images = $("#images").position().top;
@@ -79,3 +82,14 @@ $("#view-work").on("click", function () {
     900
   );
 });
+
+// Jquery for hamburger menu
+
+$(document).ready(function () {
+  $(".hamburger-btn").click(function () {
+    $(".btn").toggleClass("show");
+    $("header").toggleClass("show");
+    $("ul li").toggleClass("hide");
+  });
+});
+// End  Hamburger

@@ -25,28 +25,19 @@ a {
   color: #fff;
 }
 
-.btn {
-  padding: 0.5rem 1.5rem;
-  border: 2px solid #fff;
-  border-radius: 7px;
-}
-
-.btn:hover {
-  background: rgba(255, 255, 255, 0.6);
-  transition: all 0.4s ease;
-}
-
 img {
   width: 100%;
   height: auto;
 }
 
 /* Header */
+.changecolor {
+  background: rgba(0, 0, 0, 0.85);
+}
+
 header {
+  padding: 5px 40px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem 3rem;
   top: 0;
   position: fixed;
@@ -54,17 +45,61 @@ header {
   transition: all 0.7s ease;
 }
 
-.main-logo {
+header ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+header ul li {
+  padding: 1rem 0;
+}
+
+header ul li.btn {
+  position: relative;
+  width: auto;
+  margin: 0 0.5rem;
+  text-align: center;
+  order: 3;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 7px;
+}
+
+header ul li.btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transition: all 0.4s ease;
+}
+
+header ul li.main-logo {
+  flex: 1;
+  color: white;
+  font-weight: 600;
+}
+
+.main-logo span {
   font-family: "Pinyon Script", cursive;
   font-size: 2.5rem;
 }
 
-header ul {
-  display: flex;
+header li a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.4s;
 }
 
-header ul li {
-  margin: 0 0.5rem;
+header ul li i {
+  font-size: 1.6rem;
+}
+
+header ul li.hamburger-btn {
+  display: none;
+}
+
+header ul li.hamburger-btn.hide i:before {
+  content: "\f00d";
 }
 
 /* Showcase */
@@ -91,7 +126,8 @@ header ul li {
 }
 
 .showcase-inner {
-  width: 60%;
+  width: 80%;
+  padding-top: 3rem;
 }
 
 .showcase-inner h1 {
@@ -101,7 +137,7 @@ header ul li {
 
 .showcase-inner p {
   margin: 2rem 0 3rem;
-  padding: 0 5em;
+  padding: 0 4rem;
 }
 
 /* About */
@@ -302,7 +338,7 @@ footer {
 }
 
 .footer-wrapper {
-  width: 70%;
+  width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -331,7 +367,9 @@ footer .col-3 ul li {
 footer .col-2 ul li {
   margin-top: 0.5rem;
 }
-
+footer .col-2 ul li a {
+  padding: 0.3rem 0;
+}
 footer .col-3 ul li a {
   display: flex;
   align-items: center;
@@ -344,4 +382,132 @@ footer .col-3 ul li i {
 footer .col-2 a:hover,
 footer .col-3 a:hover {
   border-bottom: 1px solid white;
+}
+
+@media all and (max-width: 850px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  header ul li.btn {
+    width: 100%;
+    margin: 1.7rem 0;
+    border: none;
+    display: none;
+  }
+
+  header.show {
+    background: rgba(0, 0, 0, 0.85);
+    height: 100vh;
+  }
+
+  header ul li.btn.show {
+    display: block;
+  }
+
+  header ul li.hamburger-btn {
+    display: block;
+  }
+
+  .showcase-inner {
+    width: 90%;
+  }
+  .showcase-inner h1 {
+    font-size: 1.7rem;
+  }
+  .showcase-inner p {
+    margin: 2rem 0 3rem;
+    padding: 0 0.5rem;
+  }
+  .footer-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .about .about-image {
+    padding: 0 0.3em 0 3.5em;
+    height: 50vh;
+  }
+
+  .about .about-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about .about-content {
+    padding: 0 3.5em 0 2em;
+  }
+
+  .gallery-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-logo span {
+    font-size: 2.2rem;
+  }
+
+  header ul li.btn:nth-child(2) {
+    padding-top: 3vh;
+  }
+
+  .about {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about .about-image {
+    margin: 3em 0;
+    padding: 0 3rem;
+  }
+
+  .about .about-content {
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .caption-container,
+  .row {
+    display: none;
+  }
+
+  .gallery-container {
+    width: 95%;
+  }
+
+  .prev,
+  .next {
+    top: 57%;
+  }
+
+  footer .col-1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 589px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+
+  footer .col-1 {
+    writing-mode: unset;
+  }
+
+  footer .col-2 ul {
+    display: flex;
+    margin: 2rem 0 1.5rem;
+  }
+
+  footer .col-2 ul li {
+    margin: 0 0.5rem;
+    padding: 0.3rem 0.5rem;
+  }
 }
