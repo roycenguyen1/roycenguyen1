@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
@@ -12,15 +14,13 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <title>Royce HTML/CSS Learning</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <a id="top"></a>
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-circle-up fa-2x"></i></button>
+  <a href="#top" id="myBtn" title="Go to top"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
   <!-- <header id="header"> -->
   <header id="header">
     <ul>
@@ -44,7 +44,7 @@
       <h1>My Web Development learning process</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim amet natus similique, ratione necessitatibus
         error ipsam rerum quod? Cum enim nostrum dicta beatae, quidem hic officia quia excepturi tempore possimus.</p>
-      <a href="#pages" class="btn">See my works</a>
+      <a href="#pages" class="showcase-btn">See my works</a>
     </div>
   </section>
   <section class="about" id="about">
@@ -180,6 +180,7 @@
   </footer>
   <!-- JavaScript -->
   <script src="./js/main.js"></script>
+
 
 </body>
 

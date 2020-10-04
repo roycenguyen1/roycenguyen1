@@ -33,23 +33,10 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
-// Header //
-
-$(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $("#header").addClass("changecolor");
-    }
-    if ($(this).scrollTop() < 50) {
-      $("#header").removeClass("changecolor");
-    }
-  });
-});
-
 // Scroll to top button //
 
 //Get the button:
-mybutton = document.getElementById("myBtn");
+var mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -70,17 +57,47 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// Header //
+
+$(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $("#header").addClass("changecolor");
+    }
+    if ($(this).scrollTop() < 50) {
+      $("#header").removeClass("changecolor");
+    }
+  });
+});
+
 // Add  Jquery smooth scrolling effect to html website//
 
-$("#view-work").on("click", function () {
-  const images = $("#images").position().top;
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $("a").on("click", function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-  $("html, body").animate(
-    {
-      scrollTop: images,
-    },
-    900
-  );
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        "linear",
+        function () {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+      );
+    } // End if
+  });
 });
 
 // Jquery for hamburger menu
