@@ -291,3 +291,57 @@ header ul li {
   transition: all 500ms ease;
 }
 /* END BACK TO TOP BUTTON */
+
+/* Footer */
+
+footer {
+  background-color: black;
+  padding: 3rem;
+  line-height: 1.8rem;
+  border-top: 2px white solid;
+}
+
+.footer-wrapper {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .col-1 {
+  writing-mode: vertical-rl;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border: 3px white solid;
+  padding: 0.7rem 1rem;
+}
+
+footer .col-3 ul li {
+  margin-top: 0.6rem;
+}
+
+footer .col-2 ul li {
+  margin-top: 0.5rem;
+}
+
+footer .col-3 ul li a {
+  display: flex;
+  align-items: center;
+}
+
+footer .col-3 ul li i {
+  padding-right: 1rem;
+}
+
+footer .col-2 a:hover,
+footer .col-3 a:hover {
+  border-bottom: 1px solid white;
+}
