@@ -32,7 +32,6 @@ img {
 }
 
 header {
-  padding: 5px 40px;
   width: 100%;
   padding: 1rem 3rem;
   top: 0;
@@ -124,7 +123,7 @@ header ul li.hamburger-btn.hide i:before {
 
 .showcase-inner {
   width: 80%;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 .showcase-inner h1 {
