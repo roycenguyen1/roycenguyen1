@@ -85,7 +85,7 @@ $("#view-work").on("click", function () {
 
 // Jquery for hamburger menu
 
-$(document).load(function () {
+$(document).ready(function () {
   $(".hamburger-btn").click(function () {
     $(".btn").toggleClass("show");
     $("header").toggleClass("show");
