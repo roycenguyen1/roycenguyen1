@@ -61,13 +61,38 @@ header ul li.btn {
   padding: 0.5rem 1.5rem;
   border: 2px solid #fff;
   border-radius: 7px;
+  /* new */
+  transition: 1s all ease;
+  overflow: hidden;
 }
 
-header ul li.btn:hover,
-.showcase-btn:hover {
+/* new */
+.btn1:before {
+  background: rgba(255, 255, 255, 0.6);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: 0.4s all ease;
+  border-radius: 6px;
+}
+
+.btn1:before {
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+/* End new */
+
+/* .showcase-btn:hover {
   background: rgba(255, 255, 255, 0.6);
   transition: all 0.4s ease;
-}
+} */
 
 header ul li.main-logo {
   flex: 1;
@@ -142,7 +167,23 @@ header ul li.hamburger-btn.hide i:before {
   padding: 0.5rem 1.5rem;
   border: 2px solid #fff;
   border-radius: 7px;
+  /* new */
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease;
 }
+
+/* new */
+.showcase-btn:before {
+  width: 0%;
+  height: 100%;
+}
+
+.showcase-btn:hover::before {
+  width: 100%;
+}
+
+/* end new */
 
 /* About */
 .about {
